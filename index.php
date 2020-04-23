@@ -14,7 +14,9 @@ switch($argv[0]) {
         $parse->checkExists($argv[1]);
         break;
     case 'report':
+        $checkProtocol = new Controllers\Parse();
+        $checkProtocol->scheme($argv[1]);
         $report = new Controllers\Report();
-        $report->showReport($argv[1]);
+        $report->showReport($checkProtocol->scheme($argv[1]));
         break;
 }

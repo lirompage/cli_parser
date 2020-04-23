@@ -39,7 +39,7 @@ class Parse
         return $imgLinks;
     }
 
-    private function scheme($url)
+    public function scheme($url)
     {
         $http = strstr($url, "http");
         if ($http === false) {

@@ -25,9 +25,9 @@ class Report
     {
         $domain = parse_url($url);
 
-        $fileData = fopen('app/ParseFiles/'.$domain['path'] . '.csv', "r");
+        $fileData = fopen('app/ParseFiles/'.$domain['host'] . '.csv', "r");
 
-        echo "\nAnalysis for ".$domain['path'] . "\n
+        echo "\nAnalysis for ".$domain['host'] . "\n
         <<<---Start of list--->>>\n\n";
 
             for ($i = 1; (!feof($fileData)); $i++)
